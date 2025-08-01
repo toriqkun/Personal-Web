@@ -40,6 +40,24 @@ function formatExperienceDate(dateStr) {
   return date.toLocaleDateString("en-US", { year: "numeric", month: "long" });
 }
 
+app.get("/debug-schema", async (req, res) => {
+  try {
+    const currentSchema = await pool.query("SELECT current_schema();");
+    const exists = await pool.query(`
+      SELECT table_schema, table_name
+      FROM information_schema.tables
+      WHERE table_name = 'my_experience';
+    `);
+    res.json({
+      current_schema: currentSchema.rows,
+      found: exists.rows,
+    });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+
 // Routes Portofolio (Home Page)
 app.get("/", async (req, res) => {
   try {

@@ -9,6 +9,7 @@ if (process.env.DATABASE_URL) {
       rejectUnauthorized: false,
     },
   };
+  console.log("Menggunakan DATABASE_URL untuk koneksi Postgres");
 } else {
   // fallback lokal
   config = {

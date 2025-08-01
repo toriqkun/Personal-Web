@@ -1,0 +1,54 @@
+<div class="project-wrapper">
+  <div class="project-container">
+    <h2>ADD MY PROJECTS</h2>
+
+    <form id="projectForm" class="with-spinner" action="/add-projects" method="POST" enctype="multipart/form-data">
+      <!-- Project name -->
+      <div class="input-project">
+        <input type="text" id="project-name" name="project_name" placeholder="" />
+        <label for="project-name">Project Name</label>
+      </div>
+
+      <!-- Description -->
+      <div class="input-project">
+        <textarea type="text" id="desc" name="description" placeholder=""></textarea>
+        <label for="desc" class="label">Description</label>
+      </div>
+
+      {{! Repository }}
+      <div class="input-project">
+        <input type="url" id="repo-link" name="repo_link" placeholder="" />
+        <label for="repo-link">Repository</label>
+      </div>
+
+      {{! Live Demo }}
+      <div class="input-project">
+        <input type="url" id="live-demo" name="live_demo" placeholder="" />
+        <label for="live-demo">Live Demo</label>
+      </div>
+
+      {{! Technologies }}
+      <div class="group-project">
+        <label for="techno">Technologies</label>
+        <input type="text" placeholder="Contoh: Tailwind, Bootstrap, Chrome" name="technologies" id="techno" />
+        <small>Pisahkan tiap teknologi dengan koma</small>
+      </div>
+
+      {{! Upload Image }}
+      <input type="file" class="image-custom" id="image" name="image" />
+
+      <!-- Tombol Submit -->
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- Spinner Overlay -->
+<div id="overlaySpinner" class="hidden fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-center items-center">
+  <div class="bg-white p-6 rounded-xl shadow-xl flex flex-col items-center w-64 max-w-full">
+    <div class="spinner-border h-12 w-12 mb-4"></div>
+    <p class="text-gray-800 font-semibold text-center">Uploading...</p>
+  </div>
+</div>
+
+<script src="/assets/js/alert.js"></script>

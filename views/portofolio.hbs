@@ -1,0 +1,257 @@
+{{! MAIN CONTENT }}
+<div class="container mx-auto px-6 py-12 md:py-24">
+  {{! JUMBOTRON }}
+  <div id="hero">
+    <!-- Hero Section -->
+    <div class="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-16" style="margin-bottom: 132px;">
+      <!-- Left Content - Profile Image -->
+      <div class="profile-wrapper">
+        <div class="gradient-border">
+          <div class="content-box">
+            <img src="/assets/img/madara minion.jpg" alt="Profile" class="profile-img" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Content -->
+      <div class="w-full lg:w-2/3 text-center lg:text-left">
+        <div class="mb-8 size">
+          <h1 class="text-4xl lg:text-5xl font-bold mb-6">Hi, Welcome to my hut</h1>
+          <p class="text-2xl lg:text-3xl text-gray-600 dark:text-gray-400 font-medium mb-6">
+            Beginner in Full-Stack Developer
+          </p>
+          <p class="text-base lg:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+            I graduated from a vocational high school majoring in computer network engineering and have a strong interest in technology. I have work experience at Pacific Satellite Nusantara as a
+            technician and am interested in developing a career in software engineering. I am eager to learn, adapt quickly, and contribute positively to the team.
+          </p>
+        </div>
+
+        <!-- Location & Availability -->
+        <div class="flex flex-col items-center lg:items-start space-y-3 mb-8">
+          <div class="flex items-center space-x-2">
+            <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+            <span class="text-gray-500 dark:text-gray-400">Bekasi, Tarumajaya, Indonesia</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <span class="inline-block w-2 h-2 bg-green-500 rounded-full"></span>
+            <span class="text-gray-500 dark:text-gray-400">Ready to create a new project</span>
+          </div>
+        </div>
+
+        <!-- Social Links & CTA -->
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+          <a
+            href="https://wa.me/6285135635372"
+            target="_blank"
+            class="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg transition-colors flex items-center justify-center font-medium"
+          >
+            <img src="/assets/img/whatsapp.png" alt="WhatsApp" class="w-5 h-5 mr-2" />
+            Let's Talk
+          </a>
+          <a
+            href="https://drive.google.com/file/d/18LWa-bzNPrKQgCnNKVT9Ui36m7EuKDZY/view?usp=sharing"
+            target="_blank"
+            class="w-full sm:w-auto bg-black dark:bg-white text-white dark:text-gray-900 px-8 py-3 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors flex items-center justify-center font-medium"
+          >
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              ></path>
+            </svg>
+            Download CV
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{! TECH STACK CONTENT }}
+  <div id="tech-stack">
+    <!-- Tech Stack Section -->
+    <div class="mb-32">
+      <div class="add-form">
+        <h2 class="text-2xl md:text-3xl font-bold">Tech Stack - Tools I Use Everyday</h2>
+        {{!-- <a href="/add-techstack" class="expand-button">
+          <i class="fa-solid fa-plus"></i>
+          <span class="btn-text">Add</span>
+        </a> --}}
+      </div>
+
+      <!-- Swiper Container -->
+      <div class="relative">
+        <!-- Gradient Overlay Left -->
+        <div class="absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-white dark:from-gray-900 to-transparent pointer-events-none"></div>
+        <!-- Gradient Overlay Right -->
+        <div class="absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-white dark:from-gray-900 to-transparent pointer-events-none"></div>
+
+        <div class="swiper tech-swiper swiper-initialized swiper-horizontal">
+          <div class="swiper-wrapper py-4" id="swiper-wrapper-918550101bdc71399" aria-live="off" style="transform: translate3d(0px, 0px, 0px); transition-duration: 5000ms;">{{#each techStacks}}<div
+                class="swiper-slide swiper-slide-active"
+                role="group"
+                aria-label="16 / 22"
+                data-swiper-slide-index="15"
+                style="margin-right: 40px;"
+              >
+                <div class="tech-item">
+                  <div class="tech-icon">
+                    <img src="{{this.image}}" alt="{{this.tools_name}}" />
+                  </div>
+                  <span>{{this.tools_name}}</span>
+                </div>
+              </div>{{/each}}
+          </div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+      </div>
+    </div>
+
+  </div>
+
+  {{! WORK EXPERIENCE CONTENT }}
+  <div id="experience">
+    <!-- Experience Section -->
+    <div class="mb-32">
+      <div class="add-form">
+        <h2 class="text-2xl md:text-3xl font-bold">Work Experiences</h2>
+        {{!-- <a href="/add-experience" class="expand-button">
+          <i class="fa-solid fa-plus"></i>
+          <span class="btn-text">Add</span>
+        </a> --}}
+      </div>
+      <div class="space-y-6">
+        {{#each experiences}}
+          <div class="flex flex-col md:flex-row items-start bg-white dark:bg-gray-800 p-6 md:p-8 rounded-xl border border-[#c8c9c9] dark:border-[#334155] card-experience">
+            <img src="{{this.imageUrl}}" alt="{{this.company}}" class="w-16 h-16 rounded-lg mb-4 md:mb-0 object-contain bg-white" />
+            <div class="md:ml-8 flex-grow">
+              <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                <div>
+                  <h3 class="font-semibold text-lg">{{this.position}}</h3>
+                  <p class="text-green-600 dark:text-green-400 text-sm">{{this.company}}</p>
+                </div>
+                <span class="text-sm text-gray-500 dark:text-gray-400 mt-2 md:mt-0">{{this.displayDate}}</span>
+              </div>
+              <ul class="text-gray-600 dark:text-gray-400 text-sm space-y-2 list-disc list-inside mb-4">
+                {{#each this.responsibilities}}
+                  <li>{{this}}</li>
+                {{/each}}
+              </ul>
+              <div class="flex flex-wrap gap-2">
+                {{#each this.technologies}}
+                  <span class="px-3 py-1 rounded-full text-xs font-medium text-gray-600 dark:text-gray-400 tech-span">{{this}}</span>
+                {{/each}}
+              </div>
+            </div>
+          </div>
+        {{else}}
+          <p class="text-muted text-center text-xl font-semibold mt-32">No work experience has been added yet.</p>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+
+  {{! PROJECT CONTENT }}
+  <div id="projects">
+    <!-- Projects Section -->
+    <div class="mb-32">
+      <div class="add-form">
+        <h2 class="text-2xl md:text-3xl font-bold">My Projects</h2>
+        {{!-- <a href="/add-projects" class="expand-button">
+          <i class="fa-solid fa-plus"></i>
+          <span class="btn-text">Add</span>
+        </a> --}}
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        {{#each projects}}
+          <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden transition-colors border border-[#c8c9c9] dark:border-[#334155] card-project">
+            <div class="relative h-52 flex items-center justify-center bg-gray-100 dark:bg-gray-700">
+              <img src="{{this.image_url}}" alt="{{this.project_name}}" class="w-full h-full object-contain group-hover:opacity-90 transition-opacity" />
+            </div>
+            <div class="p-6 md:p-8">
+              <h3 class="font-semibold text-xl mb-3">{{this.project_name}}</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">{{this.description}}</p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                {{#each this.technologies_array}}
+                  <span class="px-3 py-1 rounded-full text-xs font-medium text-gray-600 dark:text-gray-400 tech-span">{{this}}</span>
+                {{/each}}
+              </div>
+              <div class="flex gap-3">
+                {{#if this.isPrivateRepo}}
+                  <span class="inline-flex items-center px-3 py-1.5 text-xs text-gray-500 dark:text-gray-400">
+                    <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.237 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                      ></path>
+                    </svg>
+                    Private Repository
+                  </span>
+                {{else if this.repo_link}}
+                  <a
+                    href="{{this.repo_link}}"
+                    target="_blank"
+                    class="inline-flex items-center px-3 py-1.5 text-xs text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"
+                  >
+                    <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.237 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                      ></path>
+                    </svg>
+                    View on GitHub
+                  </a>
+                {{/if}}
+
+                {{#if this.hasLiveDemo}}
+                  <a
+                    href="{{this.live_demo}}"
+                    target="_blank"
+                    class="inline-flex items-center px-3 py-1.5 text-xs text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"
+                  >
+                    <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                    Live Demo
+                  </a>
+                {{else}}
+                  <span class="inline-flex items-center px-3 py-1.5 text-xs text-gray-500 dark:text-gray-400">
+                    <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                    Demo Unavailable
+                  </span>
+                {{/if}}
+              </div>
+            </div>
+          </div>
+        {{else}}
+          <p class="col-span-full text-xl text-gray-500 text-center font-semibold py-10">No projects have been added yet.</p>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+
+  {{! CONTACT CONTENT }}
+  <div id="contact">
+    <!-- Contact Section -->
+    <div class="mb-20 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-3">Come walk with us</h2>
+      <p class="text-gray-600 dark:text-gray-400 text-sm mb-8">Want to make something bigger? Let's contact us to make something big and cool.</p>
+      <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+        <a href="mailto:toriqkun25@gmail.com" target="_blank" class="flex items-center space-x-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+          <span class="text-sm">toriqkun25@gmail.com</span>
+        </a>
+        <span class="hidden md:inline text-gray-300 dark:text-gray-600">|</span>
+        <div class="flex items-center space-x-2">
+          <img src="/assets/img/whatsapp.png" alt="WhatsApp" class="w-5 h-5 mr-2" />
+          <span class="text-sm">+62 857-1112-4767</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

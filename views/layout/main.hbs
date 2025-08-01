@@ -1,0 +1,45 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    {{! link Favicon }}
+    <link rel="icon" href="/assets/img/logo.jpg" />
+    {{! Link CSS }}
+    <link rel="stylesheet" href="/assets/css/app.css" />
+    <link rel="stylesheet" href="/assets/css/custom.css" />
+    {{! Link Google Font }}
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" />
+    {{! Link Font Awesome }}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    {{! Link Flatpickr }}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    {{! Link Sweaper CDN }}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body class="bg-gray-200 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+    <div class="min-h-screen flex flex-col">
+      {{> navbar}}
+
+      <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-3 lg:px-8 w-full">
+        {{{body}}}
+      </main>
+
+      {{#if showFooter}}
+        {{> footer}}
+      {{/if}}
+
+      <a href="#top" id="backToTop" class="fixed hidden bg-to-top bg-blue-500 rounded-full bottom-6 right-6 width z-[9999] flex items-center justify-center">
+        <i class="fa-solid fa-angle-up text-2xl"></i>
+      </a>
+
+    </div>
+
+    {{! Link Sweet Alert }}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    {{! Link Date Flatpickr }}
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="/assets/js/app.js"></script>
+  </body>
+</html>

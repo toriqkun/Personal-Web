@@ -1,0 +1,88 @@
+<div class="experience-wrapper">
+  <div class="experience-container">
+    <h2>ADD MY WORK EXPERIENCE</h2>
+
+    <form id="experienceForm" class="with-spinner" action="/add-experience" method="POST" enctype="multipart/form-data">
+      <!-- Pekerjaan -->
+      <div class="input-experience">
+        <input type="text" id="pekerjaan" name="position" placeholder="" />
+        <label for="pekerjaan">Position</label>
+      </div>
+
+      <!-- Perusahaan -->
+      <div class="input-experience">
+        <input type="text" id="perusahaan" name="company" placeholder="" />
+        <label for="perusahaan">Company</label>
+      </div>
+
+      <!-- Start Date & End Date -->
+      <div class="date-group">
+        <div class="input-date">
+          <input type="text" id="startDate" name="sdate" autocomplete="off" placeholder="" />
+          <label for="startDate">Start Date</label>
+          <i class="fa-solid fa-calendar calendar-icon"></i>
+        </div>
+
+        <div class="input-date">
+          <input type="text" id="endDate" name="edate" autocomplete="off" placeholder="" />
+          <label for="endDate">End Date</label>
+          <i class="fa-solid fa-calendar calendar-icon"></i>
+        </div>
+      </div>
+
+      {{! PRESENT }}
+      <div class="present">
+        <input type="checkbox" id="masihBekerja" name="present" />
+        <label for="masihBekerja">I currently work here</label>
+      </div>
+
+      <!-- Job Responsibilities -->
+      <div class="job-group">
+        <h4>Job Responsibilities</h4>
+        <div class="group-job">
+          <input type="text" name="job1" id="job1" placeholder="" />
+          <label for="job1">Responsibility</label>
+        </div>
+        <div class="group-job">
+          <input type="text" name="job2" id="job2" placeholder="" />
+          <label for="job2">Responsibility</label>
+        </div>
+        <div class="group-job">
+          <input type="text" name="job3" id="job3" placeholder="" />
+          <label for="job3">Responsibility</label>
+        </div>
+        <div class="group-job">
+          <input type="text" name="job4" id="job4" placeholder="" />
+          <label for="job4">Responsibility</label>
+        </div>
+        <div class="group-job">
+          <input type="text" name="job5" id="job5" placeholder="" />
+          <label for="job5">Responsibility</label>
+        </div>
+      </div>
+
+      {{! Technologies }}
+      <div class="group-tech">
+        <label for="techno">Technologies</label>
+        <input type="text" placeholder="Contoh: Tailwind, Bootstrap, Chrome" name="techno" id="techno" />
+        <small>Pisahkan tiap teknologi dengan koma</small>
+      </div>
+
+      {{! Upload Image }}
+      <input type="file" name="image" class="image-custom" />
+
+      <!-- Tombol Submit -->
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- Spinner Overlay -->
+<div id="overlaySpinner" class="hidden fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-center items-center">
+  <div class="bg-white p-6 rounded-xl shadow-xl flex flex-col items-center w-64 max-w-full">
+    <div class="spinner-border h-12 w-12 mb-4"></div>
+    <p class="text-gray-800 font-semibold text-center">Uploading...</p>
+  </div>
+</div>
+
+<script src="/assets/js/alert.js"></script>

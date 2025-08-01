@@ -1,0 +1,5 @@
+{
+  "tailwindCSS.experimental.configFile": "./tailwind.config.js",
+  "css.lint.unknownAtRules": "ignore",
+  "css.lint.validProperties": ["appearance", "vertical-align"]
+}

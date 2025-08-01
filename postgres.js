@@ -1,7 +1,20 @@
+// hanya load .env.local saat development / lokal
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config({ path: require("path").resolve(__dirname, "..", ".env.local") });
+}
+
 const { Pool } = require("pg");
 
-let config;
+// bersihkan dan debug ringan DATABASE_URL
+if (process.env.DATABASE_URL) {
+  process.env.DATABASE_URL = process.env.DATABASE_URL.trim(); // hilangkan whitespace tersembunyi
+  const safe = process.env.DATABASE_URL.replace(/:\/\/(.*?):(.*?)@/, "://$1:****@");
+  console.log("ENV: DATABASE_URL terdeteksi (disamarkan) =", safe);
+} else {
+  console.warn("ENV: DATABASE_URL TIDAK terdeteksi! fallback akan dipakai.");
+}
 
+let config;
 if (process.env.DATABASE_URL) {
   config = {
     connectionString: process.env.DATABASE_URL,
@@ -9,9 +22,7 @@ if (process.env.DATABASE_URL) {
       rejectUnauthorized: false,
     },
   };
-  console.log("ENV: DATABASE_URL terdeteksi (tidak ditampilkan isi).");
 } else {
-  console.warn("ENV: DATABASE_URL TIDAK terdeteksi! fallback akan dipakai.");
   config = {
     user: process.env.DB_USER,
     host: process.env.DB_HOST,

@@ -3,6 +3,7 @@ const express = require("express");
 const { engine } = require("express-handlebars");
 const fileUpload = require("express-fileupload");
 const path = require("path");
+require("dotenv").config({ path: require("path").resolve(__dirname, "..", ".env.local") });
 
 const pool = require("../postgres");
 const { handleTechStack, handleExperience, handleProjects } = require("../controllers/controllers");

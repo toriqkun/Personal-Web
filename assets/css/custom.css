@@ -155,6 +155,12 @@ html.dark body .card-experience .tech-span {
   background-color: #374151;
 }
 
+@media (max-width: 600px) {
+  html body .card-experience:hover {
+    box-shadow: 0 10px 20px rgba(33, 33, 33, 0.25), 0 -7px 20px rgba(33, 33, 33, 0.1), 0 0 17px rgba(255, 255, 255, 0.03);
+  }
+}
+
 /* PROJECT */
 html body .card-project {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -169,6 +175,12 @@ html body .card-project .tech-span {
 }
 html.dark body .card-project .tech-span {
   background-color: #374151;
+}
+
+@media (max-width: 600px) {
+  html body .card-project:hover {
+    box-shadow: 0 10px 20px rgba(33, 33, 33, 0.25), 0 -7px 20px rgba(33, 33, 33, 0.1), 0 0 17px rgba(255, 255, 255, 0.03);
+  }
 }
 
 /* FOOTER */
@@ -204,11 +216,11 @@ body .width {
 
 @media (max-width: 600px) {
   body .width {
-    width: 30px;
-    height: 30px;
+    width: 33px;
+    height: 33px;
   }
-  body .width i{
-    font-size: 20px;
+  body .width i {
+    font-size: 20.5px;
   }
 }
 

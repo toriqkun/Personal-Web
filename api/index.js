@@ -27,6 +27,7 @@ app.engine(
     extname: "hbs",
   })
 );
+app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "..", "views"));
 
 // Helper function untuk format tanggal pengalaman kerja
@@ -56,7 +57,6 @@ app.get("/debug-schema", async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
-
 
 // Routes Portofolio (Home Page)
 app.get("/", async (req, res) => {

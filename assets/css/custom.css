@@ -212,6 +212,7 @@ footer svg {
 body .width {
   width: 40px;
   height: 40px;
+  background: #393939 !important;
 }
 
 @media (max-width: 600px) {

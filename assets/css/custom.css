@@ -157,7 +157,7 @@ html.dark body .card-experience .tech-span {
 
 @media (max-width: 600px) {
   html body .card-experience:hover {
-    box-shadow: 0 10px 20px rgba(33, 33, 33, 0.25), 0 -7px 20px rgba(33, 33, 33, 0.1), 0 0 17px rgba(255, 255, 255, 0.03);
+    box-shadow: 0 7px 17px rgba(33, 33, 33, 0.25), 0 -4px 17px rgba(33, 33, 33, 0.1), 0 0 14px rgba(255, 255, 255, 0.03);
   }
 }
 
@@ -179,7 +179,7 @@ html.dark body .card-project .tech-span {
 
 @media (max-width: 600px) {
   html body .card-project:hover {
-    box-shadow: 0 10px 20px rgba(33, 33, 33, 0.25), 0 -7px 20px rgba(33, 33, 33, 0.1), 0 0 17px rgba(255, 255, 255, 0.03);
+    box-shadow: 0 7px 17px rgba(33, 33, 33, 0.25), 0 -4px 17px rgba(33, 33, 33, 0.1), 0 0 14px rgba(255, 255, 255, 0.03);
   }
 }
 
